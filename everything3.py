@@ -5,15 +5,12 @@ initialization and setup of the SDK, including loading the necessary DLL,
 creating and managing the search state, and connecting to the Everything client.
 
 The `search` method is the main entry point for performing file searches.
-It takes a search pattern, an optional offset, and an optional count, and
-returns a list of full paths for the matching files and folders. The method
-sets the search parameters, executes the search, and retrieves the results,
-handling the necessary SDK calls and cleanup.
+It takes a search pattern and returns a list of full paths for the matching 
+files and folders. The method sets the search parameters, executes the search, 
+and retrieves the results, handling the necessary SDK calls and cleanup.
 
-The class also provides a set of methods for configuring various search
-options, such as case sensitivity, whole word matching, regex mode, diacritics
-matching, and more. These methods allow the user to fine-tune the search
-behavior to their specific needs.
+The search pattern support numerous search modifiers and options.
+Read this page: https://www.voidtools.com/support/everything/searching/
 
 Finally, the `__del__` method is responsible for cleaning up the resources
 used by the class, such as the search state and the client connection,
